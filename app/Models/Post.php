@@ -15,7 +15,7 @@ use Illuminate\Support\Carbon;
 
 /**
  * @package App\Models\Post
- * @property string $id
+ * @property int $id
  * @property string $title
  * @property string $content
  * @property string $created_by

@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use App\Enums\PostStatus;
+use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -15,14 +16,16 @@ class PostFactory extends Factory
      *
      * @return array<string, mixed>
      */
-    public function definition(): array
+    public function definition()
     {
-        $published = fake()->boolean();
         return [
-            'title' => fake()->text(100),
-            'content' => fake()->text(1000),
-            'status' => $published ? PostStatus::Published : PostStatus::Draft,
-            'published_at' => $published ? now() : null,
+            'id' => Str::ulid(),
+            'title' => $this->faker->sentence,
+            'content' => $this->faker->paragraph,
+            // 'created_by' => Str::ulid(),
+            // 'updated_by' => Str::ulid(),
+            'status' => $this->faker->randomElement([\App\Enums\PostStatus::Draft, \App\Enums\PostStatus::Published]),
+            'published_at' => $this->faker->dateTimeBetween('-1 year', 'now'),
         ];
     }
 }
