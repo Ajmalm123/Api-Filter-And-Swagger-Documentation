@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CheckResponseController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\UserController;
 use Illuminate\Http\Request;
@@ -14,3 +15,5 @@ Route::patch('post-change-status/{post}', [PostController::class, 'changeStatus'
 
 Route::apiResource('users', UserController::class);
 Route::patch('user-change-status/{post}', [UserController::class, 'changeStatus']);
+
+Route::get('check-res',CheckResponseController::class);

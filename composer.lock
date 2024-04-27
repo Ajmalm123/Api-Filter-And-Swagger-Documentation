@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e5e926abb41ec6e9801f2c7fcbe529f6",
+    "content-hash": "25b3d73aa5895920a8df701e776b05ee",
     "packages": [
         {
             "name": "brick/math",
@@ -2621,6 +2621,75 @@
                 }
             ],
             "time": "2023-11-12T21:59:55+00:00"
+        },
+        {
+            "name": "prodemmi/laravel-apiful",
+            "version": "v1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/prodemmi/laravel-apiful.git",
+                "reference": "345b8938aae8d7d093918f7702ace7a0d8b18d39"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/prodemmi/laravel-apiful/zipball/345b8938aae8d7d093918f7702ace7a0d8b18d39",
+                "reference": "345b8938aae8d7d093918f7702ace7a0d8b18d39",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.0"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^8.0",
+                "phpunit/phpunit": "^10.1@dev"
+            },
+            "type": "package",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Prodemmi\\Apiful\\ApifulServiceProvider"
+                    ],
+                    "aliases": {
+                        "Apiful": "Prodemmi\\Apiful\\Facades\\Apiful"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Prodemmi\\Apiful\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Emad Malekpour",
+                    "email": "prodemmi@gmail.com",
+                    "homepage": "https://github.com/prodemmi"
+                }
+            ],
+            "description": "Laravel Apiful is a full customisable package for api responses.",
+            "homepage": "https://github.com/prodemmi/laravel-apiful",
+            "keywords": [
+                "RESTful API",
+                "api",
+                "api response",
+                "apiful",
+                "laravel",
+                "laravel api helper",
+                "laravel api response",
+                "laravel api response helper",
+                "laravel response",
+                "laravel response helper",
+                "response"
+            ],
+            "support": {
+                "issues": "https://github.com/prodemmi/laravel-apiful/issues",
+                "source": "https://github.com/prodemmi/laravel-apiful/tree/v1.1.0"
+            },
+            "time": "2023-03-22T08:43:52+00:00"
         },
         {
             "name": "psr/cache",
